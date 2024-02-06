@@ -12,6 +12,12 @@ code {
     monospace;
 }
 
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .news-feed {
   background-color: red;
 }

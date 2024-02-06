@@ -3,7 +3,7 @@ import CurrencyConverter from "./components/CurrencyConverter"
 
 const App = () => {
   return (
-    <div>
+    <div className="app">
       <NewsFeed />
       <CurrencyConverter />
     </div>
