@@ -4,8 +4,8 @@ import CurrencyConverter from "./components/CurrencyConverter"
 const App = () => {
   return (
     <div className="app">
-      <NewsFeed />
-      <CurrencyConverter />
+        <CurrencyConverter />
+        <NewsFeed />
     </div>
   )
 }
