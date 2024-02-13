@@ -28,7 +28,7 @@ const CurrencyConverter = () => {
         axios.request(options).then((response) => {
             console.log(response.data)
             setExchangeRate(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
-            setResult(exchangeRate * amount)
+            setResult(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'] * amount)
         }).catch ((error) => {
             console.error(error)
         })
@@ -88,7 +88,9 @@ const CurrencyConverter = () => {
                 <button onClick={convert}>Convert</button>
 
             </div>
-            <ExchangeRate/>
+            <ExchangeRate
+                exchangeRate={exchangeRate}
+            />
         </div>
     )
 }

@@ -1,7 +1,7 @@
-const ExchangeRate = () => {
+const ExchangeRate = ({exchangeRate}) => {
     return (
         <div className="exchange-rate">
-            ExchangeRate
+            {exchangeRate}
         </div>
     )
 }
