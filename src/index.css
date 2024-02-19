@@ -18,6 +18,10 @@ code {
   align-items: center;
 }
 
+.app-wrapper {
+  display: flex;
+}
+
 .news-feed {
   background-color: rgb(204, 204, 231);
   padding: 10px;
