@@ -9,6 +9,7 @@ const NewsFeed = () => {
         const options = {
             method: 'GET',
             url: 'https://crypto-news-live9.p.rapidapi.com/news/CryptoNews',
+            // url: 'http://localhost:8000/news',
             headers: {
                 'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
                 'X-RapidAPI-Host': 'crypto-news-live9.p.rapidapi.com'
