@@ -12,6 +12,29 @@ app.get('/', (req, res) => {
     res.json('hi')
 })
 
+app.get('/convert', (req, res) => {
+    const options = {
+        method: 'GET',
+        url: 'https://alpha-vantage.p.rapidapi.com/query',
+        params: {
+            to_currency: 'USD',
+            function: 'CURRENCY_EXCHANGE_RATE',
+            from_currency: 'BTC'
+        },
+        headers: {
+            'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
+            'X-RapidAPI-Host': 'alpha-vantage.p.rapidapi.com'
+        }
+    }
+
+    axios.request(options).then((response) => {
+        res.json(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
+        console.log(response.data)
+    }).catch ((error) => {
+        console.error(error)
+    })
+})
+
 app.get('/news', (req, res) => {
     const options = {
         method: 'GET',
